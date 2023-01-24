@@ -43,6 +43,16 @@ function boxClicked(e) {
 
 const hasPlayerWon = (player) => {
   //from top left, check across, down, and diagonal
+  let temp=0;
+  spaces.forEach((item)=>{
+    if(item==null){
+      temp++;
+    }
+  }
+   );
+  if(temp==0){
+      playText.innerHTML = "It's Draw !";
+    }
   if (spaces[0] === player) {
     if (spaces[1] === player && spaces[2] === player) {
       console.log(`${player} wins up top`);

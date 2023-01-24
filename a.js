@@ -78,6 +78,10 @@ const hasPlayerWon = (player) => {
       console.log(`${player} wins on the middle vertical`);
       return true;
     }
+    if (spaces[2] === player && spaces[6] === player) {
+      console.log(`${player} wins on the middle vertical`);
+      return true;
+    }
   }
 };
 
